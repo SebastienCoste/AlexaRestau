@@ -12,7 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="restau-api" target="1.5" />
-      <module name="restau-domain" target="1.5" />
+      <module name="restau-domain" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

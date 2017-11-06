@@ -1,12 +1,12 @@
 package scoste.restau;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 import scoste.restau.event.Event;
 import scoste.restau.event.EventBuilder;
 import scoste.restau.event.EventServiceManager;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 

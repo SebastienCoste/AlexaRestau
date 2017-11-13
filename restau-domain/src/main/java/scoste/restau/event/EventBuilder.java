@@ -1,5 +1,9 @@
 package scoste.restau.event;
 
+import scoste.restau.event.value.ChangeCLientEventValue;
+import scoste.restau.event.value.EventValue;
+import scoste.restau.event.value.RepasEventValue;
+
 public class EventBuilder {
 
     public String input;
@@ -14,26 +18,37 @@ public class EventBuilder {
     }
 
     public Event build(){
-        EventType type = EventType.ERROR;
-        String valeur = null;
+        EventType type;
         String firstChar = input.substring(0, 1);
+
+        try {
         if ("+".equals(firstChar)){
             type = EventType.AJOUTE_CLIENT;
-            valeur = input.substring(1).trim();
+            ChangeCLientEventValue valeur = new ChangeCLientEventValue();
+            valeur.nbChange = input.substring(1).trim();
+            return new Event(type, valeur);
         } else if ("-".equals(firstChar)) {
             type = EventType.RETIRE_CLIENT;
-            valeur = input.substring(1).trim();
-        } else {
-            try {
-                Integer.valueOf(input.trim());
-                valeur = input.trim();
-                type = EventType.AJOUTE_CLIENT;
-            } catch (Exception e) {
-                type = EventType.ERROR;
-                valeur = null;
-            }
-        }
+            ChangeCLientEventValue valeur = new ChangeCLientEventValue();
+            valeur.nbChange = input.substring(1).trim();
+            return new Event(type, valeur);
+        }   else if ("r".equals(firstChar)) {
+            type = EventType.INCREMENTE_STATUS_REPAS;
+            RepasEventValue value = new RepasEventValue();
+            value.idRepas = Integer.valueOf(input.substring(1).trim());
+            return new Event(type, value);
 
-        return new Event(type, valeur);
+        } else {
+                ChangeCLientEventValue valeur = new ChangeCLientEventValue();
+                valeur.nbChange = input.trim();
+                type = EventType.AJOUTE_CLIENT;
+                return new Event(type, valeur);
+
+        }
+        } catch (Exception e) {
+            type = EventType.ERROR;
+            EventValue valeur = null;
+            return new Event(type, valeur);
+        }
     }
 }

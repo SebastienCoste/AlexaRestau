@@ -24,4 +24,14 @@ public enum StatusRepas {
                 .findFirst()
                 .orElse(this);
     }
+
+    public StatusRepas getPreviousStatus(){
+        return Arrays.asList(StatusRepas.values())
+                .stream()
+                .filter( sr -> sr.ordre == this.ordre-1)
+                .findFirst()
+                .orElse(this);
+    }
+
+
 }

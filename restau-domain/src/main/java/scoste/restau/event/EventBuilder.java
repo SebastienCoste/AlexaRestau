@@ -19,23 +19,33 @@ public class EventBuilder {
 
     public Event build(){
         EventType type;
-        String firstChar = input.substring(0, 1);
+        String firstChar = input.split(" ")[0];
 
         try {
         if ("+".equals(firstChar)){
             type = EventType.AJOUTE_CLIENT;
             ChangeCLientEventValue valeur = new ChangeCLientEventValue();
-            valeur.nbChange = input.substring(1).trim();
+            String[] split = input.substring(1).trim().split(" ");
+            valeur.nbChange = split[1];
+            valeur.idRepas = split [0];
             return new Event(type, valeur);
         } else if ("-".equals(firstChar)) {
             type = EventType.RETIRE_CLIENT;
             ChangeCLientEventValue valeur = new ChangeCLientEventValue();
-            valeur.nbChange = input.substring(1).trim();
+            String[] split = input.substring(1).trim().split(" ");
+            valeur.nbChange = split[1];
+            valeur.idRepas = split [0];
             return new Event(type, valeur);
-        }   else if ("r".equals(firstChar)) {
+        }   else if ("r+".equals(firstChar)) {
             type = EventType.INCREMENTE_STATUS_REPAS;
             RepasEventValue value = new RepasEventValue();
-            value.idRepas = Integer.valueOf(input.substring(1).trim());
+            value.idRepas = Integer.valueOf(input.substring(2).trim());
+            return new Event(type, value);
+
+        }   else if ("r-".equals(firstChar)) {
+            type = EventType.DECREMENTE_STATUS_REPAS;
+            RepasEventValue value = new RepasEventValue();
+            value.idRepas = Integer.valueOf(input.substring(2).trim());
             return new Event(type, value);
 
         } else {

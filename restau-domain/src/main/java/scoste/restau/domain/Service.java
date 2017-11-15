@@ -11,15 +11,12 @@ import java.util.Map;
 
 public class Service extends Subscriber<Event>{
 
-	public Integer clientsATable;
 	public Map<Integer, Repas> repasLst = new HashMap<>();
 
 	public Service() {
-		this.clientsATable = 0;
 	}
 
-	public Service(int clients, Map<Integer, Repas> repas) {
-		this.clientsATable = clients;
+	public Service(Map<Integer, Repas> repas) {
 		this.repasLst = repas;
 	}
 
@@ -36,12 +33,15 @@ public class Service extends Subscriber<Event>{
 				return;
 
             case INCREMENTE_STATUS_REPAS:
-                incrementeRepas(event);
+                incrementeRepas(event, true);
                 return;
+			case DECREMENTE_STATUS_REPAS:
+				incrementeRepas(event, false);
+				return;
 		}
 	}
 
-    private void incrementeRepas(Event event) {
+    private void incrementeRepas(Event event, boolean avance) {
 
 	    RepasEventValue eventValue = (RepasEventValue) event.valeur;
 	    Integer idRepas = eventValue.idRepas;
@@ -49,7 +49,7 @@ public class Service extends Subscriber<Event>{
 	    if (repas == null){
 	        repasLst.put(idRepas, new Repas(idRepas, 0, StatusRepas.CHOIX_EN_COURS));
         } else {
-	        repasLst.put(idRepas, repas.prochaineEtapeStatusRepas());
+	        repasLst.put(idRepas, repas.prochaineEtapeStatusRepas(avance));
         }
 
     }
@@ -59,15 +59,22 @@ public class Service extends Subscriber<Event>{
 
         ChangeCLientEventValue eventClient = (ChangeCLientEventValue) event.valeur;
 		int nbr = Integer.valueOf(eventClient.nbChange);
-		this.clientsATable += nbr;
+		Integer idRepas = Integer.valueOf(eventClient.idRepas);
+		Repas repas = this.repasLst.get(idRepas);
+		if (repas == null){
+			repasLst.put(idRepas, new Repas(idRepas, nbr, StatusRepas.CHOIX_EN_COURS));
+		} else {
+			repas.nombreClient += nbr;
+		}
 	}
 
 	private void retireClient(Event event){
         ChangeCLientEventValue eventClient = (ChangeCLientEventValue) event.valeur;
         int nbr = Integer.valueOf(eventClient.nbChange);
-		int clientsATable =this.clientsATable - nbr;
-		if (clientsATable >= 0) {
-			this.clientsATable = clientsATable;
+		Integer idRepas = Integer.valueOf(eventClient.idRepas);
+		Repas repas = this.repasLst.get(idRepas);
+		if (repas != null && repas.nombreClient - nbr >= 0){
+			repas.nombreClient -= nbr;
 		}
 	}
 }

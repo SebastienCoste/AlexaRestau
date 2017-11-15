@@ -14,8 +14,8 @@ public class Repas {
 	   this.status = status;
    }
 
-   public Repas prochaineEtapeStatusRepas(){
-       return new Repas(this.numero, this.nombreClient, this.status.getNextStatus());
+   public Repas prochaineEtapeStatusRepas(boolean avance){
+       return new Repas(this.numero, this.nombreClient, avance ? this.status.getNextStatus() : this.status.getPreviousStatus());
    }
 
 

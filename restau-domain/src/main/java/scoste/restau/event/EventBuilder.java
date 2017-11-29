@@ -1,6 +1,7 @@
 package scoste.restau.event;
 
 import scoste.restau.event.value.ChangeCLientEventValue;
+import scoste.restau.event.value.EventTableValue;
 import scoste.restau.event.value.EventValue;
 import scoste.restau.event.value.RepasEventValue;
 
@@ -46,6 +47,11 @@ public class EventBuilder {
             type = EventType.DECREMENTE_STATUS_REPAS;
             RepasEventValue value = new RepasEventValue();
             value.idRepas = Integer.valueOf(input.substring(2).trim());
+            return new Event(type, value);
+
+        } else if ("bc".equals(firstChar)){
+            type = EventType.CLEAN_TABLE;
+            EventTableValue value = new EventTableValue(Integer.valueOf(input.substring(2).trim()));
             return new Event(type, value);
 
         } else {

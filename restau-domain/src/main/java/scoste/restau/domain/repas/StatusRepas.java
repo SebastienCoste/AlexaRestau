@@ -1,4 +1,4 @@
-package scoste.restau.domain;
+package scoste.restau.domain.repas;
 
 import java.util.Arrays;
 

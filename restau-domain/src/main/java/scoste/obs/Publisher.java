@@ -12,6 +12,7 @@ public abstract class Publisher<T extends Observable> {
 
     public void subscribe(Subscriber<T> sub){
         observers.add(sub);
+        sub.source = this;
     }
 
     public void unsubscribe(Subscriber<T> sub){

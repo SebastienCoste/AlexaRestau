@@ -22,3 +22,53 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+*.log
+logback-*.xml
+!logback-test.xml
+logs/
+
+### Eclipse ###
+*.pydevproject
+.metadata
+.gradle
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.project
+.classpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+### Intellij ###
+*.iml
+.idea/
+out/
+
+### Maven ###
+target/
+build/
+pom.xml.*
+release.properties
+
+### JREBEL ###
+rebel.xml
+
+### JGIVEN ###
+jgiven-reports/
+
+### Spring boot ###
+application-*.yml
+
+### AWS ###
+application-secret.properties

@@ -5,13 +5,14 @@ import scoste.restau.web.dto.event.data.Previous;
 
 public abstract class Event<P,N> {
 
-    String restaurant;
-    Previous<P> previous;
-    Next<N> next;
-    String comment;
+    protected EventId eventId;
+    protected EventTime eventTime;
+    protected Previous<P> previous;
+    protected Next<N> next;
+    protected String comment;
 
-    public String getId() {
-        return restaurant;
+    public EventId getId() {
+        return eventId;
     }
 
     public abstract EventType getType();

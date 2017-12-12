@@ -1,19 +1,21 @@
-package scoste.restau.web.dto.event;
+package scoste.restau.web.dto.event.impl;
 
+import scoste.restau.web.dto.event.*;
 import scoste.restau.web.dto.event.data.Next;
 import scoste.restau.web.dto.event.data.Previous;
 
-public class EventMeal<P,N>  extends Event<P,N>  {
+public class EventMeal<P,N>  extends Event<P,N> {
 
     private final String meal;
     private final EventType type;
     private final MealAction mealAction;
 
-    private EventMeal(String restaurant, String meal, EventType type, MealAction mealAction, Previous<P> previous, Next<N> next, String comment){
+    private EventMeal(EventId eventId, EventTime eventTime, String meal, EventType type, MealAction mealAction, Previous<P> previous, Next<N> next, String comment){
+        this.eventId = eventId;
+        this.eventTime = eventTime;
         this.mealAction = mealAction;
         this.previous = previous;
         this.next = next;
-        this.restaurant = restaurant;
         this.meal = meal;
         this.comment = comment;
         this.type = type;
@@ -33,12 +35,13 @@ public class EventMeal<P,N>  extends Event<P,N>  {
     public String toString() {
         return "EventMeal{" +
                 "meal='" + meal + '\'' +
-                ", comment='" + comment + '\'' +
                 ", type=" + type +
                 ", mealAction=" + mealAction +
-                ", restaurant='" + restaurant + '\'' +
+                ", eventId=" + eventId +
+                ", eventTime=" + eventTime +
                 ", previous=" + previous +
                 ", next=" + next +
+                ", comment='" + comment + '\'' +
                 '}';
     }
 
@@ -50,7 +53,8 @@ public class EventMeal<P,N>  extends Event<P,N>  {
 
     public static class Builder<P,N>{
 
-        private String restaurant;
+        private EventTime eventTime;
+        private EventId eventId;
         private String meal;
         private String comment;
         private EventType type;
@@ -88,14 +92,15 @@ public class EventMeal<P,N>  extends Event<P,N>  {
             return this;
         }
 
-        public Builder(String restaurant, String meal){
+        public Builder(EventId eventId, EventTime eventTime, String meal){
             this.meal = meal;
-            this.restaurant = restaurant;
+            this.eventId = eventId;
+            this.eventTime = eventTime;
             this.type = EventType.OK;
         }
 
         public EventMeal build(){
-            return new EventMeal(restaurant, meal, type, mealAction, previous, next, comment);
+            return new EventMeal(eventId, eventTime, meal, type, mealAction, previous, next, comment);
         }
     }
 

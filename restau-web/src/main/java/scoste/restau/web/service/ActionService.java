@@ -4,11 +4,10 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 import scoste.restau.web.dto.Ack;
 import scoste.restau.web.dto.AckType;
-import scoste.restau.web.dto.event.Event;
-import scoste.restau.web.dto.event.EventMeal;
-import scoste.restau.web.dto.event.EventType;
+import scoste.restau.web.dto.event.*;
 import scoste.restau.web.dto.event.data.Next;
 import scoste.restau.web.dto.event.data.Previous;
+import scoste.restau.web.dto.event.impl.EventMeal;
 import scoste.restau.web.repository.ActionRepository;
 
 @Service
@@ -20,9 +19,9 @@ public class ActionService {
         this.actionRepository = actionRepository;
     }
 
-    public Mono<Ack> addClient(String idRestau, String idTable, Integer previous, Integer next) {
+    public Mono<Ack> addClient(EventId eventId, EventTime eventTime, String idTable, Integer previous, Integer next) {
 
-        Event<Integer, Integer> event = new EventMeal.Builder(idRestau, idTable)
+        Event<Integer, Integer> event = new EventMeal.Builder(eventId, eventTime, idTable)
                 .addClient()
                 .from(new Previous(previous))
                 .to(new Next(next))
@@ -30,8 +29,8 @@ public class ActionService {
         return treatEvent(event);
     }
 
-    public Mono<Ack> removeClient(String idRestau, String idTable, Integer previous, Integer next) {
-        Event<Integer, Integer> event = new EventMeal.Builder(idRestau, idTable)
+    public Mono<Ack> removeClient(EventId eventId, EventTime eventTime, String idTable, Integer previous, Integer next) {
+        Event<Integer, Integer> event = new EventMeal.Builder(eventId, eventTime, idTable)
                 .removeClient()
                 .from(new Previous(previous))
                 .to(new Next(next))
@@ -39,15 +38,20 @@ public class ActionService {
         return treatEvent(event);
     }
 
-    public Mono<Ack> treatFailedMealRequest(String idRestau, String idTable, String comment) {
+    public Mono<Ack> treatFailedMealRequest(EventId eventId, EventTime eventTime, String idTable, String comment) {
 
-        EventMeal event = new EventMeal.Builder(idRestau, idTable).withComment(comment).withType(EventType.FUNCTIONNAL_ALERT).build();
+        EventMeal event = new EventMeal.Builder(eventId, eventTime, idTable)
+                .withComment(comment)
+                .withType(EventType.FUNCTIONNAL_ALERT)
+                .build();
         return treatEvent(event);
     }
 
-    public Mono<Ack> treatNoChangeMealRequest(String idRestau, String idTable) {
+    public Mono<Ack> treatNoChangeMealRequest(EventId eventId, EventTime eventTime, String idTable) {
 
-        Event event = new EventMeal.Builder(idRestau, idTable).withType(EventType.FUNCTIONNAL_WARNING).build();
+        Event event = new EventMeal.Builder(eventId, eventTime, idTable)
+                .withType(EventType.FUNCTIONNAL_WARNING)
+                .build();
         actionRepository.saveEvent(event);
         return Mono.just(new Ack(AckType.NO_CHANGE, event));
     }

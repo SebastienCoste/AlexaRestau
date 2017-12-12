@@ -47,3 +47,4 @@ application-*.yml
 
 ### AWS ###
 application-secret.properties
+restau-web/src/main/resources/application-secret.properties

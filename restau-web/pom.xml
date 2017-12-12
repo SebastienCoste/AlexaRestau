@@ -24,6 +24,8 @@
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Finchley.M5</spring-cloud.version>
 		<springfox.version>2.6.1</springfox.version>
+        <spring-data-dynamodb.version>4.4.1</spring-data-dynamodb.version>
+        <aws-java-sdk-dynamodb.version>1.11.64</aws-java-sdk-dynamodb.version>
 	</properties>
 
 	<dependencies>
@@ -50,12 +52,13 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-dynamodb</artifactId>
-            <version>1.11.34</version>
+            <version>${aws-java-sdk-dynamodb.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.github.derjust</groupId>
             <artifactId>spring-data-dynamodb</artifactId>
-            <version>4.3.1</version>
+            <version>${spring-data-dynamodb.version}</version>
         </dependency>
 
 
@@ -123,6 +126,10 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+        <repository>
+            <id>opensourceagility-release</id>
+            <url>http://repo.opensourceagility.com/release/</url>
+        </repository>
 	</repositories>
 
 	<pluginRepositories>

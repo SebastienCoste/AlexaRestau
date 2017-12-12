@@ -30,4 +30,8 @@ public abstract class Event<P,N> {
     public String getComment() {
         return comment;
     }
+
+    public EventTime getEventTime() {
+        return eventTime;
+    }
 }

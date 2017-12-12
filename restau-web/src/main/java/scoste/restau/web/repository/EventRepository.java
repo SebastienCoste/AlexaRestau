@@ -4,14 +4,26 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 import scoste.restau.domain.event.Event;
 import scoste.restau.domain.event.EventId;
+import scoste.restau.web.repository.dto.EventDto;
 import scoste.restau.web.dto.AckType;
 
 @Service
-public class ActionRepository {
+public class EventRepository {
+
+    private final EventDynamoRepository eventDynamoRepository;
+
+    public EventRepository(EventDynamoRepository eventDynamoRepository) {
+        this.eventDynamoRepository = eventDynamoRepository;
+    }
+
+
     public Mono<AckType> saveEvent(Event event) {
 
         EventId id = event.getId();
         System.out.println(id.id + ": " + event.toString());
+
+        eventDynamoRepository.save(EventDto.from(event));
+
         return Mono.just(AckType.OK);
     }
 }

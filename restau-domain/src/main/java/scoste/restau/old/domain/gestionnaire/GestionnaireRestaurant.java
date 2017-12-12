@@ -1,4 +1,4 @@
-package scoste.restau.domain.gestionnaire;
+package scoste.restau.old.domain.gestionnaire;
 
 import scoste.obs.Subscriber;
 import scoste.restau.old.event.Event;

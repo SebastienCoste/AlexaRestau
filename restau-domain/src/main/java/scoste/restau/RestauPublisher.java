@@ -1,7 +1,7 @@
 package scoste.restau;
 
 import scoste.obs.Publisher;
-import scoste.restau.event.Event;
+import scoste.restau.old.event.Event;
 
 public class RestauPublisher extends Publisher<Event> {
 }

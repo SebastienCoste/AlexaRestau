@@ -4,10 +4,10 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 import scoste.restau.web.dto.Ack;
 import scoste.restau.web.dto.AckType;
-import scoste.restau.web.dto.event.*;
-import scoste.restau.web.dto.event.data.Next;
-import scoste.restau.web.dto.event.data.Previous;
-import scoste.restau.web.dto.event.impl.EventMeal;
+import scoste.restau.domain.event.*;
+import scoste.restau.domain.event.data.Next;
+import scoste.restau.domain.event.data.Previous;
+import scoste.restau.domain.event.impl.EventMeal;
 import scoste.restau.web.repository.ActionRepository;
 
 @Service

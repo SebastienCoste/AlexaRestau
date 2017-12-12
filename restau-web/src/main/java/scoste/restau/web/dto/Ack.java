@@ -1,6 +1,6 @@
 package scoste.restau.web.dto;
 
-import scoste.restau.web.dto.event.Event;
+import scoste.restau.domain.event.Event;
 
 public class Ack {
 

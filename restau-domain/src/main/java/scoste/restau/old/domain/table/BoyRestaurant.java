@@ -1,4 +1,4 @@
-package scoste.restau.domain.table;
+package scoste.restau.old.domain.table;
 
 import scoste.obs.Subscriber;
 import scoste.restau.old.event.Event;

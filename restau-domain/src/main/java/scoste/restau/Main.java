@@ -1,18 +1,17 @@
 package scoste.restau;
 
 import scoste.obs.Publisher;
-import scoste.restau.domain.gestionnaire.GestionnaireRestaurant;
-import scoste.restau.domain.repas.SalleRestaurant;
-import scoste.restau.domain.table.BoyRestaurant;
-import scoste.restau.domain.table.StatusTable;
-import scoste.restau.domain.table.Table;
-import scoste.restau.event.Event;
-import scoste.restau.event.EventBuilder;
+import scoste.restau.old.domain.gestionnaire.GestionnaireRestaurant;
+import scoste.restau.old.domain.repas.SalleRestaurant;
+import scoste.restau.old.domain.table.BoyRestaurant;
+import scoste.restau.old.domain.table.StatusTable;
+import scoste.restau.old.domain.table.Table;
+import scoste.restau.old.event.Event;
+import scoste.restau.old.event.EventBuilder;
 
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Main {
 

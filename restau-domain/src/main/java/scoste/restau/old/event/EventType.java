@@ -1,0 +1,18 @@
+package scoste.restau.old.event;
+
+public enum EventType {
+
+	AJOUTE_CLIENT,
+	RETIRE_CLIENT,
+
+	INCREMENTE_STATUS_REPAS,
+	DECREMENTE_STATUS_REPAS,
+
+    OCCUPPE_TABLE,
+	LIBERE_TABLE,
+    CLEAN_TABLE,
+
+    REQUEST_A_TABLE,
+
+	ERROR;
+}

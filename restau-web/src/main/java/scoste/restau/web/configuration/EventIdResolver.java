@@ -6,7 +6,7 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 import scoste.restau.web.WebConfig;
-import scoste.restau.web.dto.event.EventId;
+import scoste.restau.domain.event.EventId;
 
 import java.util.InputMismatchException;
 import java.util.Optional;

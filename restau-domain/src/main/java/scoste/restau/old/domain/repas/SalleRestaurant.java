@@ -1,11 +1,11 @@
-package scoste.restau.domain.repas;
+package scoste.restau.old.domain.repas;
 
 
 import scoste.obs.Subscriber;
 import scoste.restau.old.domain.table.BoyRestaurant;
-import scoste.restau.old.event.Event;
 import scoste.restau.old.event.EventType;
 import scoste.restau.old.event.value.ChangeCLientEventValue;
+import scoste.restau.old.event.Event;
 import scoste.restau.old.event.value.EventErrorValue;
 import scoste.restau.old.event.value.EventTableValue;
 import scoste.restau.old.event.value.RepasEventValue;

@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 import scoste.restau.web.dto.Ack;
-import scoste.restau.web.dto.event.EventId;
-import scoste.restau.web.dto.event.EventTime;
+import scoste.restau.domain.event.EventId;
+import scoste.restau.domain.event.EventTime;
 import scoste.restau.web.service.ActionService;
 
 @RestController
@@ -36,7 +36,7 @@ public class ServiceController {
     public Mono<Ack> removeClient (EventId eventId, EventTime eventTime, @PathVariable String idTable, @PathVariable Integer previous, @PathVariable Integer variation){
 
         if(variation > 0){
-            return actionService.removeClient(eventId, eventTime, idTable, previous == null ? 0 : previous, previous - variation);
+            return actionService.removeClient(eventId, eventTime, idTable, previous, previous - variation);
         } else if(variation < 0){
             return actionService.treatFailedMealRequest(eventId, eventTime, idTable, "invalid client variation: " + variation);
         } else {

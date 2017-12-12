@@ -6,7 +6,6 @@ import scoste.restau.web.dto.event.data.Previous;
 public class EventMeal<P,N>  extends Event<P,N>  {
 
     private final String meal;
-    private final String comment;
     private final EventType type;
     private final MealAction mealAction;
 

@@ -18,6 +18,6 @@ public class Next<N> implements Data<N> {
 
     @Override
     public N getData() {
-        return null;
+        return data;
     }
 }

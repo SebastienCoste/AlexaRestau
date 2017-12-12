@@ -8,6 +8,7 @@ public abstract class Event<P,N> {
     String restaurant;
     Previous<P> previous;
     Next<N> next;
+    String comment;
 
     public String getId() {
         return restaurant;
@@ -23,5 +24,9 @@ public abstract class Event<P,N> {
 
     public Next getNext() {
         return next;
+    }
+
+    public String getComment() {
+        return comment;
     }
 }

@@ -34,7 +34,7 @@ public class ServiceController {
     public Mono<Ack> removeClient (@PathVariable String idRestau, @PathVariable String idTable, @PathVariable Integer previous, @PathVariable Integer variation){
 
         if(variation > 0){
-            return actionService.removeClient(idRestau, idTable, previous == null ? 0 : previous, previous + variation);
+            return actionService.removeClient(idRestau, idTable, previous == null ? 0 : previous, previous - variation);
         } else if(variation < 0){
             return actionService.treatFailedMealRequest(idRestau, idTable, "invalid client variation: " + variation);
         } else {

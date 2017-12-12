@@ -2,61 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fca0ea0-7f09-4ad5-930c-ba51de136fb9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/domain/gestionnaire/GestionnaireRestaurant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/domain/repas/Repas.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/domain/repas/SalleRestaurant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/domain/repas/StatusRepas.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/domain/table/BoyRestaurant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/domain/table/StatusTable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/domain/table/Table.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/event/Event.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/event/EventBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/event/EventType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/event/value/ChangeCLientEventValue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/event/value/EventErrorValue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/event/value/EventTableValue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/event/value/EventValue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/event/value/RepasEventValue.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/event/Event.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/event/Event.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/event/EventBuilder.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/event/EventBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/event/EventType.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/event/EventType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/event/value/ChangeCLientEventValue.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/event/value/ChangeCLientEventValue.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/event/value/EventErrorValue.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/event/value/EventErrorValue.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/event/value/EventTableValue.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/event/value/EventTableValue.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/event/value/EventValue.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/event/value/EventValue.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/event/value/RepasEventValue.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/event/value/RepasEventValue.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/Event.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/event/Event.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/EventId.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/event/EventId.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/EventScope.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/event/EventScope.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/EventTime.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/event/EventTime.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/EventType.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/event/EventType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/data/Data.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/event/data/Data.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/data/Next.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/event/data/Next.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/data/Previous.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/event/data/Previous.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/impl/EventMeal.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/event/impl/EventMeal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_core_1_11_125.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_dynamodb_1_11_34.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_kms_1_11_125.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_s3_1_11_125.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_jmespath_java_1_11_125.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_cbor_2_9_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_derjust_spring_data_dynamodb_4_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_4_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__software_amazon_ion_ion_java_1_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restau-web/src/main/resources/application-secret.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/obs/Publisher.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/obs/Publisher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/obs/Subscriber.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/obs/Subscriber.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/Main.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/RestauPublisher.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/RestauPublisher.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/gestionnaire/GestionnaireRestaurant.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/gestionnaire/GestionnaireRestaurant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/repas/SalleRestaurant$1.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/repas/SalleRestaurant$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/repas/Repas.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/repas/Repas.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/repas/SalleRestaurant.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/repas/SalleRestaurant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/table/BoyRestaurant$1.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/table/BoyRestaurant$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/repas/StatusRepas.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/repas/StatusRepas.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/table/BoyRestaurant.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/table/BoyRestaurant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/table/StatusTable.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/table/StatusTable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/table/Table.class" afterPath="$PROJECT_DIR$/restau-domain/target/classes/scoste/restau/domain/table/Table.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/pom.xml" afterPath="$PROJECT_DIR$/restau-domain/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/Main.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/RestauPublisher.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/RestauPublisher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/gestionnaire/GestionnaireRestaurant.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/gestionnaire/GestionnaireRestaurant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/repas/SalleRestaurant.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/repas/SalleRestaurant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/table/BoyRestaurant.java" afterPath="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/table/BoyRestaurant.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-web/pom.xml" afterPath="$PROJECT_DIR$/restau-web/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/configuration/EventIdResolver.java" afterPath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/configuration/EventIdResolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/configuration/EventTimeResolver.java" afterPath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/configuration/EventTimeResolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/controller/ServiceController.java" afterPath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/controller/ServiceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/Ack.java" afterPath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/Ack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/repository/ActionRepository.java" afterPath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/repository/ActionRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/service/ActionService.java" afterPath="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/service/ActionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restau-web/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/restau-web/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/restau-domain/target/" />
@@ -71,41 +47,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="ServiceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/controller/ServiceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/service/ActionService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/repository/ActionRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restau-web/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="75">
+              <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServiceController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/controller/ServiceController.java">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restau-web/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="application-secret.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restau-web/src/main/resources/application-secret.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="30">
+              <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restau-domain/pom.xml">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state relative-caret-position="0">
+              <caret line="0" column="59" lean-forward="true" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -144,8 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/SalleRestaurant.java" />
-        <option value="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/table/StatusTable.java" />
         <option value="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/event/EventType.java" />
         <option value="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/repas/Repas.java" />
         <option value="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/domain/table/Table.java" />
@@ -174,7 +178,6 @@
         <option value="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/Ack.java" />
         <option value="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/EventType.java" />
         <option value="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/data/Previous.java" />
-        <option value="$PROJECT_DIR$/restau-web/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/configuration/InstantJsonDeserializer.java" />
         <option value="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/dto/event/data/Next.java" />
         <option value="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/service/ActionService.java" />
@@ -193,8 +196,11 @@
         <option value="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/domain/table/Table.java" />
         <option value="$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/RestauPublisher.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/restau-web/pom.xml" />
         <option value="$PROJECT_DIR$/restau-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/restau-web/pom.xml" />
+        <option value="$PROJECT_DIR$/restau-web/src/main/resources/application-secret.properties" />
+        <option value="$PROJECT_DIR$/restau-web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -251,37 +257,48 @@
             <path>
               <item name="AlexaRestau" type="b2602c69:ProjectViewProjectNode" />
               <item name="AlexaRestau" type="462c0819:PsiDirectoryNode" />
-              <item name="restau-web" type="462c0819:PsiDirectoryNode" />
+              <item name="restau-domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AlexaRestau" type="b2602c69:ProjectViewProjectNode" />
               <item name="AlexaRestau" type="462c0819:PsiDirectoryNode" />
-              <item name="restau-web" type="462c0819:PsiDirectoryNode" />
+              <item name="restau-domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AlexaRestau" type="b2602c69:ProjectViewProjectNode" />
               <item name="AlexaRestau" type="462c0819:PsiDirectoryNode" />
-              <item name="restau-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AlexaRestau" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AlexaRestau" type="462c0819:PsiDirectoryNode" />
-              <item name="restau-web" type="462c0819:PsiDirectoryNode" />
+              <item name="restau-domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AlexaRestau" type="b2602c69:ProjectViewProjectNode" />
               <item name="AlexaRestau" type="462c0819:PsiDirectoryNode" />
-              <item name="restau-web" type="462c0819:PsiDirectoryNode" />
+              <item name="restau-domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlexaRestau" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlexaRestau" type="462c0819:PsiDirectoryNode" />
+              <item name="restau-domain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="scoste" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlexaRestau" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlexaRestau" type="462c0819:PsiDirectoryNode" />
+              <item name="restau-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlexaRestau" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlexaRestau" type="462c0819:PsiDirectoryNode" />
+              <item name="restau-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AlexaRestau" type="b2602c69:ProjectViewProjectNode" />
@@ -289,9 +306,6 @@
               <item name="restau-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -321,6 +335,7 @@
       <recent name="scoste.restau.web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/restau-web/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/domain" />
       <recent name="$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/configuration" />
@@ -484,7 +499,7 @@
       <workItem from="1509991216491" duration="763000" />
       <workItem from="1509992011507" duration="1048000" />
       <workItem from="1510562400678" duration="4235000" />
-      <workItem from="1513068098513" duration="13253000" />
+      <workItem from="1513068098513" duration="13855000" />
     </task>
     <task id="LOCAL-00001" summary="integration of web face">
       <created>1513074625485</created>
@@ -507,11 +522,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513084415976</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="rework">
+      <created>1513085668873</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1513085668873</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24674000" />
+    <option name="totallyTimeSpent" value="25276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1080" extended-state="6" />
@@ -526,7 +548,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39958158" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39958158" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33054394" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -537,7 +559,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="MyBatis Sql Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26093918" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -560,7 +582,8 @@
     <MESSAGE value="integration of web face" />
     <MESSAGE value="some fix" />
     <MESSAGE value="adding more event management" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding more event management" />
+    <MESSAGE value="rework" />
+    <option name="LAST_COMMIT_MESSAGE" value="rework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -569,22 +592,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/domain/table/StatusTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/event/EventType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/restau-domain/src/main/java/scoste/restau/old/domain/repas/Repas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -719,14 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restau-web/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/configuration/InstantJsonDeserializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -824,8 +823,8 @@
         <state relative-caret-position="165">
           <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding>
-            <element signature="e#114#115#0" expanded="true" />
-            <element signature="e#142#143#0" expanded="true" />
+            <element signature="e#114#115#0" expanded="false" />
+            <element signature="e#142#143#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -890,26 +889,6 @@
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/repository/ActionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/service/ActionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -993,18 +972,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restau-web/pom.xml">
+    <entry file="file://$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/controller/ServiceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state relative-caret-position="240">
+          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/controller/ServiceController.java">
+    <entry file="file://$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/service/ActionService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        <state relative-caret-position="390">
+          <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restau-web/src/main/java/scoste/restau/web/repository/ActionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restau-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restau-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restau-web/src/main/resources/application-secret.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="59" lean-forward="true" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
           <folding />
         </state>
       </provider>

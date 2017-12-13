@@ -11,7 +11,7 @@ public class EventMeal<P,N>  extends Event<P,N> {
     private final MealAction mealAction;
 
     private EventMeal(EventId eventId, EventTime eventTime, String meal, EventType type, MealAction mealAction, Previous<P> previous, Next<N> next, String comment){
-        this.eventId = eventId;
+        this.id = eventId;
         this.eventTime = eventTime;
         this.mealAction = mealAction;
         this.previous = previous;
@@ -37,7 +37,7 @@ public class EventMeal<P,N>  extends Event<P,N> {
                 "meal='" + meal + '\'' +
                 ", type=" + type +
                 ", mealAction=" + mealAction +
-                ", eventId=" + eventId +
+                ", id=" + id +
                 ", eventTime=" + eventTime +
                 ", previous=" + previous +
                 ", next=" + next +

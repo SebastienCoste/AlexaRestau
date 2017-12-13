@@ -9,6 +9,11 @@ public class Next<N> implements Data<N> {
     }
 
     @Override
+    public String toRawString() {
+        return data.toString();
+    }
+
+    @Override
     public String toString() {
         return "Next{" +
                 "data=" + data +

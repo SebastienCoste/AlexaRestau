@@ -24,7 +24,7 @@
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Finchley.M5</spring-cloud.version>
 		<springfox.version>2.6.1</springfox.version>
-        <spring-data-dynamodb.version>4.4.1</spring-data-dynamodb.version>
+        <spring-data-dynamodb.version>5.0.0</spring-data-dynamodb.version>
         <aws-java-sdk-dynamodb.version>1.11.64</aws-java-sdk-dynamodb.version>
 	</properties>
 
@@ -56,7 +56,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.derjust</groupId>
+			<groupId>com.github.derjust</groupId>
             <artifactId>spring-data-dynamodb</artifactId>
             <version>${spring-data-dynamodb.version}</version>
         </dependency>

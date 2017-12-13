@@ -5,14 +5,14 @@ import scoste.restau.domain.event.data.Previous;
 
 public abstract class Event<P,N> {
 
-    protected EventId eventId;
+    protected EventId id;
     protected EventTime eventTime;
     protected Previous<P> previous;
     protected Next<N> next;
     protected String comment;
 
     public EventId getId() {
-        return eventId;
+        return id;
     }
 
     public abstract EventType getType();

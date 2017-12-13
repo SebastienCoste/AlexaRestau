@@ -27,7 +27,7 @@ public class WebConfig extends WebMvcConfigurationSupport {
     @Value("${swagger.enabled}")
     private boolean swaggerEnabled;
 
-    public final static String EVENT_ID = "eventId";
+    public final static String EVENT_ID = "id";
     public final static String EVENT_TIMESTAMP = "eventTime";
 
     @Override

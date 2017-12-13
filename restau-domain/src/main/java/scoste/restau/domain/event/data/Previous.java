@@ -15,6 +15,11 @@ public class Previous<P> implements Data<P> {
     }
 
     @Override
+    public String toRawString() {
+        return data.toString();
+    }
+
+    @Override
     public String toString() {
         return "Previous{" +
                 "data=" + data +

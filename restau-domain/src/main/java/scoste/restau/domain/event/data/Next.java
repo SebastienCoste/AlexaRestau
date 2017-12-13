@@ -1,11 +1,22 @@
 package scoste.restau.domain.event.data;
 
-public class Next<N> implements Data<N> {
+import java.io.Serializable;
+import java.util.function.Function;
+
+public class Next<N extends Serializable> implements Data<N> {
 
     public N data;
 
     public Next (N data){
         this.data = data;
+    }
+
+    public <P extends Serializable> Previous<P> toPrevious(Function<N, P> function){
+        return new Previous<>(function.apply(data));
+    }
+
+    public Previous<N> toPrevious(){
+        return new Previous<>(data);
     }
 
     @Override

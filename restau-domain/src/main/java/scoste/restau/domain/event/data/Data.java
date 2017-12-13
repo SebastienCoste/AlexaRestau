@@ -1,6 +1,8 @@
 package scoste.restau.domain.event.data;
 
-public interface Data<D> {
+import java.io.Serializable;
+
+public interface Data<D extends Serializable> {
 
     D getData();
 

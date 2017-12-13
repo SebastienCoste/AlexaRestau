@@ -7,13 +7,13 @@ import scoste.restau.domain.event.Event;
 import java.util.Objects;
 
 @DynamoDBTable(tableName = "RestauEvent")
-public class EventDto {
+public class EventDto<P,N> {
 
 
     @Id
     private EventIdDto id;
-    private String previous;
-    private String next;
+    private P previous;
+    private N next;
     private String comment;
 
 
@@ -46,12 +46,12 @@ public class EventDto {
     }
 
     @DynamoDBAttribute(attributeName = "Next")
-    public String getNext() {
+    public N getNext() {
         return next;
     }
 
     @DynamoDBAttribute(attributeName = "Previous")
-    public String getPrevious() {
+    public P getPrevious() {
         return previous;
     }
 
@@ -73,7 +73,7 @@ public class EventDto {
         return Objects.hash(id, previous, next, comment);
     }
 
-    public static EventDto from(Event event){
+    public static EventDto fromDomain(Event event){
 
         EventIdDto id = new EventIdDto();
         id.setEventTime(event.getEventTime().time);
@@ -81,21 +81,26 @@ public class EventDto {
         EventDto dto = new EventDto();
         dto.id = id;
         dto.comment = event.getComment();
-        dto.previous = event.getPrevious().toRawString();
-        dto.next = event.getNext().toRawString();
+        dto.previous = event.getPrevious().data;
+        dto.next = event.getNext().data;
 
         return dto;
+    }
+
+    public Event toDomain(){
+
+        return null;
     }
 
     public void setId(EventIdDto id) {
         this.id = id;
     }
 
-    public void setPrevious(String previous) {
+    public void setPrevious(P previous) {
         this.previous = previous;
     }
 
-    public void setNext(String next) {
+    public void setNext(N next) {
         this.next = next;
     }
 

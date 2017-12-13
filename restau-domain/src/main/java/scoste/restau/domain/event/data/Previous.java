@@ -1,6 +1,9 @@
 package scoste.restau.domain.event.data;
 
-public class Previous<P> implements Data<P> {
+import java.io.Serializable;
+import java.util.function.Function;
+
+public class Previous<P extends Serializable> implements Data<P> {
 
     public P data;
 
@@ -8,6 +11,13 @@ public class Previous<P> implements Data<P> {
         this.data = data;
     }
 
+    public <N extends Serializable> Next<N> toNext(Function<P,N> function){
+        return new Next<>(function.apply(data));
+    }
+
+    public Next<P> toNext(){
+        return new Next<>(data);
+    }
 
     @Override
     public P getData() {

@@ -4,7 +4,9 @@ import scoste.restau.domain.event.*;
 import scoste.restau.domain.event.data.Next;
 import scoste.restau.domain.event.data.Previous;
 
-public class EventMeal<P,N>  extends Event<P,N> {
+import java.io.Serializable;
+
+public class EventMeal<P extends Serializable,N extends Serializable>  extends Event<P,N> {
 
     private final String meal;
     private final EventType type;
@@ -48,10 +50,10 @@ public class EventMeal<P,N>  extends Event<P,N> {
 
     private enum MealAction {
         ADD_CLIENT,
-        REMOVE_CLIENT;
+        REMOVE_CLIENT
     }
 
-    public static class Builder<P,N>{
+    public static class Builder<P extends Serializable,N extends Serializable>{
 
         private EventTime eventTime;
         private EventId eventId;
@@ -59,8 +61,8 @@ public class EventMeal<P,N>  extends Event<P,N> {
         private String comment;
         private EventType type;
         private MealAction mealAction;
-        public Previous<P> previous;
-        public Next<N> next;
+        private Previous<P> previous;
+        private Next<N> next;
 
         public Builder withComment(String comment){
             this.comment = comment;

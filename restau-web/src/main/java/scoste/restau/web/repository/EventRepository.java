@@ -22,7 +22,7 @@ public class EventRepository {
         EventId id = event.getId();
         System.out.println(id.id + ": " + event.toString());
 
-        eventDynamoRepository.save(EventDto.from(event));
+        eventDynamoRepository.save(EventDto.fromDomain(event));
 
         return Mono.just(AckType.OK);
     }

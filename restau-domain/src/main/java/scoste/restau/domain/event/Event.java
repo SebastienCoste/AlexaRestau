@@ -3,7 +3,9 @@ package scoste.restau.domain.event;
 import scoste.restau.domain.event.data.Next;
 import scoste.restau.domain.event.data.Previous;
 
-public abstract class Event<P,N> {
+import java.io.Serializable;
+
+public abstract class Event<P extends Serializable,N extends Serializable> {
 
     protected EventId id;
     protected EventTime eventTime;

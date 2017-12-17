@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>scoste.restau</groupId>
-	<artifactId>parent</artifactId>
+	<artifactId>restau-parent</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>parent</name>
+	<name>restau-parent</name>
 	<description>Restau</description>
 
 	<parent>

@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>scoste.restau</groupId>
-	<artifactId>web</artifactId>
+	<artifactId>restau-web</artifactId>
 	<packaging>jar</packaging>
 
 	<name>restau-web</name>
@@ -12,7 +12,7 @@
 
     <parent>
         <groupId>scoste.restau</groupId>
-        <artifactId>parent</artifactId>
+        <artifactId>restau-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
@@ -33,7 +33,7 @@
 
 		<dependency>
 			<groupId>scoste.restau</groupId>
-			<artifactId>domain</artifactId>
+			<artifactId>restau-domain</artifactId>
             <version>${project.version}</version>
 		</dependency>
 
